@@ -2,6 +2,7 @@
 
 Movie ticket booking management done using django REST
 
+Every API and models in "App" directory
 -created register user and login user API
 
 -Created a POST api to add a new movie with certain number of available tickets and price for each and status as open/close
