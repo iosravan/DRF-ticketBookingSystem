@@ -92,6 +92,9 @@ def Book_tickets(request):
         total_price = Movie.price*Number_of_tickets
         Book_ticket = ReservedTickets(ticket_id=ticket_id,Registered_user=str(request.user),movie_name=Movie.movie_name,movie_id=Movie.movie_id,tickets_booked=Number_of_tickets,createdDate=datetime.now(),price=total_price)
         Book_ticket.save()
+        if Movie.available==0:
+            Movie.status='close'
+            Movie.save()
         return Response(status=200, data={"Msg":f"Tickets booked successfully. Your ticket ID is {ticket_id}"})
 
 @api_view(['GET'])
