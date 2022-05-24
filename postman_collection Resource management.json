@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "7d669f58-ec85-4609-b491-02a647e9c087",
+		"name": "Resource management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17246296"
+	},
+	"item": [
+		{
+			"name": "RegisterMovie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token e7d0b46c7a49398c208c7034d067b7117dd19d40c868f5f77287e92b30d2dad3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"movie_name\":\"superman2\",\n    \"status\":\"open\",\n    \"Total_tickets\":100,\n    \"price\":200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/RegisterMovie/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"RegisterMovie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Available movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token e7d0b46c7a49398c208c7034d067b7117dd19d40c868f5f77287e92b30d2dad3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/AvailableMovies/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"AvailableMovies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Book Tickets",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token e7d0b46c7a49398c208c7034d067b7117dd19d40c868f5f77287e92b30d2dad3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"movie_id\":\"M-1001\",\n    \"No.of tickets\":980\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/BookTickets/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"BookTickets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My tickets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token e7d0b46c7a49398c208c7034d067b7117dd19d40c868f5f77287e92b30d2dad3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/viewTickets/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"viewTickets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"ss@g.com\",\n    \"username\":\"user2\",\n    \"password\":\"Admin321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/register/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"ss@g.com\",\n    \"username\":\"user2\",\n    \"password\":\"Admin321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/login/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
